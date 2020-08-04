@@ -1,0 +1,16 @@
+<div class="MainBox">
+  <table class="MyTable">
+    <thead>
+      <tr>
+        <th class="LeftAlign">Item</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of CumulativeGrocerList">
+        <td class="LeftAlign">{{item.name}}</td>
+        <td class="CenterAlign">{{item.Quantity}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

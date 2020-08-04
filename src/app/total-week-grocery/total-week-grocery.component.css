@@ -1,0 +1,47 @@
+.MainBox{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    /* background-color: #72675a; */
+}
+
+.MyTable{
+  text-align: center;
+  border: 5px solid rgb(209, 169, 36);
+  width: 59%;
+}
+
+.MyTable thead tr {
+  border:5px solid rgb(209, 169, 36);
+}
+
+th{
+  padding: 15px;
+  /* text-align: right; */
+}
+
+tr:hover{
+  background-color: #E1F5FE;
+  color: black;
+  font-weight: bolder;
+}
+
+td{
+  padding: 10px;
+  /* text-align: right; */
+}
+
+.MyTable tbody tr {
+  border:0.5px solid rgb(209, 169, 36);
+}
+
+.LeftAlign{
+  text-align: left;
+}
+
+.CenterAlign{
+  text-align: center;
+}
+

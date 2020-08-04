@@ -1,0 +1,51 @@
+.MyContainer{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  /* border: 2px solid white; */
+  /* background-color: lightskyblue; */
+  justify-content: center;
+}
+
+.ItemContainer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 32em;
+  /* border: 2px solid; */
+  flex-wrap: wrap;
+  border-radius: 6px;
+  margin: 5px;
+}
+
+.ItemContainer:hover{
+  background-color: #6e8884c7;
+}
+
+.itemBox{
+  background-color: #232623c2;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.ItemName{
+  position: relative;
+  margin: 12px;
+  padding: 10px;
+}
+
+.quantity{
+  float: right;
+}
+
+.ButtonFooter{
+  padding: 0px 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.MyInput{
+  width: 55px;
+  border-radius: 5px;
+  background-color: #e4e8ffb3;
+}

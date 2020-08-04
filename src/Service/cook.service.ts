@@ -10,19 +10,30 @@ import { Icook } from "../app/Modal/Cook_modal";
 export class CookService {
 
   ApiUrl = 'api/CookList';
-
-  // headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
-  // httpOptions = {
-  //   headers: this.headers
-  // };
+  ApiUrlById = 'api/CookGroceryList/';
 
   constructor(private http: HttpClient) { }
 
-  getCook(): Observable <Icook[]>{
+  getCook(): Observable<Icook[]> {
     return this.http.get<Icook[]>(
       this.ApiUrl
-    ).pipe(tap(data=>{
+    ).pipe(tap(data => {
       console.log("CookList", data);
     }))
   };
+
+  // getCookByID(id:number):Observable<Icook>{
+  //   const url = `${this.ApiUrl}/${id}`;
+  //   return this.http.get<Icook>(url).pipe(
+  //     tap(item => console.log("Fetched ID", item)
+  //     )
+  //   );
+  // };
+
+
+  getCookByID(id: number): Observable<any> {
+    return this.http.get<any>(this.ApiUrlById + id)
+  };
+
 }
+

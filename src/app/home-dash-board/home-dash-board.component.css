@@ -1,0 +1,22 @@
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+}
+
+.innerBox{
+  width: 150px;
+  height: 150px;
+  border: 2px solid red;
+  margin: 10px;
+  justify-self: center;
+  line-height: 539%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.innerBox:hover{
+  background-color: gray;
+}

@@ -1,0 +1,6 @@
+<div class="box">
+  <div class="innerBox" *ngFor="let item of CookList" (click)="GetCookById(item.id)">{{item.name}}</div>
+</div>
+<div class="box">
+  <div class="innerBox" (click)="goToAllGroceryListApp()">Week grocery list</div>
+</div>

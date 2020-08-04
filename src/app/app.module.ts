@@ -11,12 +11,16 @@ import { CookListComponent } from './cook-list/cook-list.component';
 import { CookService } from 'src/Service/cook.service';
 import { GroceryService } from 'src/Service/grocery.service';
 import { GroceryListComponent } from './grocery-list/grocery-list.component';
+import { HomeDashBoardComponent } from './home-dash-board/home-dash-board.component';
+import { TotalWeekGroceryComponent } from './total-week-grocery/total-week-grocery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CookListComponent,
-    GroceryListComponent
+    GroceryListComponent,
+    HomeDashBoardComponent,
+    TotalWeekGroceryComponent
   ],
   imports: [
     BrowserModule,

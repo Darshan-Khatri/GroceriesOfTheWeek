@@ -1,1 +1,12 @@
-<p>grocery-list works!</p>
+<div class="MyContainer">
+  <div class="ItemContainer" *ngFor="let item of GrocerList">
+    <div class="itemBox">
+      <div class="ItemName">{{item.name}} <span class="quantity">Quantity <input class="MyInput" type="number"></span></div>
+    </div>
+    <div class="btn-group ButtonFooter" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary btn-sm">Add</button>
+      <button type="button" class="btn btn-primary btn-sm">Delete</button>
+      <button type="button" class="btn btn-primary btn-sm">Update</button>
+    </div>
+  </div>
+</div>
