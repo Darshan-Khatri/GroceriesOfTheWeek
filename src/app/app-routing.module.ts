@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'groceryOfTheWeek/home', component: HomeDashBoardComponent},
   { path: 'groceryOfTheWeek/cookList', component: CookListComponent },
+  { path: 'groceryOfTheWeek/groceryList/:id', component: GroceryListComponent},
   { path: 'groceryOfTheWeek/groceryList', component: GroceryListComponent},
   { path: 'groceryOfTheWeek/CumalativeGroceryListOfTheWeek', component: TotalWeekGroceryComponent},
 ];

@@ -12,10 +12,9 @@
   flex-direction: column;
   position: relative;
   width: 32em;
-  /* border: 2px solid; */
   flex-wrap: wrap;
   border-radius: 6px;
-  margin: 5px;
+  margin: -5px;
 }
 
 .ItemContainer:hover{
@@ -36,6 +35,7 @@
 
 .quantity{
   float: right;
+  margin: 0px 7px;
 }
 
 .ButtonFooter{
@@ -48,4 +48,13 @@
   width: 55px;
   border-radius: 5px;
   background-color: #e4e8ffb3;
+}
+
+
+.MyButton{
+  border-radius: 5px;
+  background-color: #d1c8a3;
+  font-family: revert;
+  font-weight: 700;
+  box-shadow: 4px 8px 2px 0px #413e3e8f;
 }

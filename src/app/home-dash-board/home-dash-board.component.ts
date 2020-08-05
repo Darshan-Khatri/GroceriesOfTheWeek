@@ -31,6 +31,7 @@ export class HomeDashBoardComponent implements OnInit {
   GetCookById(id: number) {
     this._CookService.getCookByID(id).subscribe((CookData => {
       console.log(CookData);
+      this._Router.navigate(['/groceryOfTheWeek/groceryList',id]);
     }))
   }
 

@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
@@ -26,6 +28,7 @@ import { TotalWeekGroceryComponent } from './total-week-grocery/total-week-groce
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
