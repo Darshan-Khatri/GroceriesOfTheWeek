@@ -32,7 +32,7 @@ export class GroceryService {
         console.log("Cook id is = ", id, data)
       }));
   }
-
+ //Service
   UpdateQuantity(name: string, Quantity: number, id: number): Observable<IGrocery> {
     var input = {id: id, groceryList: [{name: name, Quantity: Quantity}]};
     console.log("input data", this.ApiUrlById + id)
