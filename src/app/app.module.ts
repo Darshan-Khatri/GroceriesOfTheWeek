@@ -15,6 +15,11 @@ import { GroceryService } from 'src/Service/grocery.service';
 import { GroceryListComponent } from './grocery-list/grocery-list.component';
 import { HomeDashBoardComponent } from './home-dash-board/home-dash-board.component';
 import { TotalWeekGroceryComponent } from './total-week-grocery/total-week-grocery.component';
+import { DialogModalComponent } from './Share/dialog-modal/dialog-modal.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,16 @@ import { TotalWeekGroceryComponent } from './total-week-grocery/total-week-groce
     CookListComponent,
     GroceryListComponent,
     HomeDashBoardComponent,
-    TotalWeekGroceryComponent
+    TotalWeekGroceryComponent,
+    DialogModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )

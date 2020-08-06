@@ -3,6 +3,8 @@ import { GroceryService } from "../../Service/grocery.service";
 import { IGrocery } from "../Modal/Grocery_List";
 import { ICookGroceryList } from "../Modal/Cook_Grocery_List";
 import { ActivatedRoute } from "@angular/router";
+import {MatDialog, MatDialogConfig, } from '@angular/material/dialog';
+import { DialogModalComponent } from '../Share/dialog-modal/dialog-modal.component';
 
 @Component({
   selector: 'app-grocery-list',
@@ -20,6 +22,7 @@ export class GroceryListComponent implements OnInit {
   constructor(
     private _GroceryService: GroceryService,
     private _ActivatedRoute: ActivatedRoute,
+    private _MatDialog:MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -72,7 +75,21 @@ export class GroceryListComponent implements OnInit {
 
       })
     })
+  }
 
+  ModalForm(){
+    const MatDialog = this._MatDialog.open(DialogModalComponent,
+      {
+        maxWidth:"80%",
+        disableClose : true,
+        autoFocus:true,
+      });
+
+      MatDialog.afterClosed().subscribe(dialogResult => {
+        // if user pressed yes dialogResult will be true,
+        // if he pressed no - it will be false
+        console.log(dialogResult);
+      });
   }
 
 }

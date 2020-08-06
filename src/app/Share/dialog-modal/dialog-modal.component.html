@@ -1,0 +1,28 @@
+<div>
+
+  <!-- <form class="example-form">
+    <div class="example-full-width">
+      <label>Item Name </label>
+      <input type="text" placeholder="Ex. Butter" value="Bread">
+    </div>
+
+    <div class="example-full-width">
+      <label>Quantity </label>
+      <input type="number" placeholder="Ex. 10" value=0>
+    </div>
+  </form> -->
+
+  <form>
+    <div class="form-group">
+      <label>Item Name</label>
+      <input type="text" placeholder="Ex. Butter" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="number" placeholder="Ex. 0" class="form-control">
+    </div>
+    <button (click)="onDismiss()">Exit</button>
+    <button (click)="onConfirm()" style="float: right;">Submit</button>
+  </form>
+
+</div>

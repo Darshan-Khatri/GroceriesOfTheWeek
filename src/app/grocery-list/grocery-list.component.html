@@ -1,3 +1,6 @@
+<div class="HeaderBtn">
+  <button class="MyBtn" (click)="ModalForm()">Add New Item</button>
+</div>
 <div class="MyContainer" *ngIf="GrocerList !=null || this.id ==0">
   <div class="ItemContainer" *ngFor="let item of GrocerList">
     <div class="itemBox">
@@ -19,7 +22,6 @@
     </div>
   </div>
 </div>
-    <div class="FooterBtn">
-      <button class="MyButton"
-      (click)="OnButtonClick()">Add</button>
-    </div>
+<div class="FooterBtn">
+  <button class="MyButton" (click)="OnButtonClick()">Add</button>
+</div>
