@@ -14,8 +14,6 @@ export class GroceryListComponent implements OnInit {
   GrocerList: IGrocery[] = [];
 
   GroceryListByCookID: ICookGroceryList;
-
-  // GroceryListByCookId: ICookGroceryList;
   id: number = 0;
 
 
@@ -48,18 +46,33 @@ export class GroceryListComponent implements OnInit {
   }
 
 
-  OnButtonClick(itemName: string, quantity: number) {
-    console.log(itemName);
-    console.log(quantity);
-    console.log(this.id);
+  // OnButtonClick(itemName: string, quantity: number) {
+  //   console.log(itemName);
+  //   console.log(quantity);
+  //   console.log(this.id);
 
-    this._GroceryService.UpdateQuantity(itemName, quantity, this.id).subscribe((Data) => {
-      console.log(Data);
+  //   this._GroceryService.UpdateQuantity(itemName, quantity, this.id).subscribe((Data) => {
+  //     console.log(Data);
+  //     this._GroceryService.getGroceryListById(this.id).subscribe(data => {
+  //       console.log("check", data);
+  //       this.GroceryListByCookID = data;
+  //     })
+  //   })
+  // }
+
+  OnButtonClick() {
+
+    console.log(this.id);
+    console.log(this.GroceryListByCookID);
+
+    this._GroceryService.UpdateQuantity(this.GroceryListByCookID.groceryList, this.id).subscribe((Data) => {
       this._GroceryService.getGroceryListById(this.id).subscribe(data => {
-        console.log("check", data);
-        this.GroceryListByCookID = data;
+        this.GroceryListByCookID.groceryList = data.groceryList;
+        console.log("this.GroceryListByCookID", this.GroceryListByCookID);
+
       })
     })
+
   }
 
 }

@@ -20,9 +20,9 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const GroceryList: IGrocery[] = [
-      { name: 'Tomato', Quantity: null },
+      { name: 'Tomato', Quantity: 0 },
       { name: 'Potatoes', Quantity: 15 },
-      { name: 'Yogurt', Quantity: null },
+      { name: 'Yogurt', Quantity: 0 },
       { name: 'Wafers', Quantity: 5 },
     ];
 
