@@ -18,8 +18,8 @@ import { TotalWeekGroceryComponent } from './total-week-grocery/total-week-groce
 import { DialogModalComponent } from './Share/dialog-modal/dialog-modal.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     FormsModule,
     MatDialogModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

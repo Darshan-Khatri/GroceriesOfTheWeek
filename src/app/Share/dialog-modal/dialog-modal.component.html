@@ -12,17 +12,32 @@
     </div>
   </form> -->
 
-  <form>
+  <form [formGroup] = "itemForm" (ngSubmit)="SubmitDialog()" #item_form="ngForm">
     <div class="form-group">
-      <label>Item Name</label>
-      <input type="text" placeholder="Ex. Butter" class="form-control">
+      <label required>Item Name</label>
+      <input formControlName="name" type="text" placeholder="Ex. Butter" class="form-control"
+      [ngClass]="{'is-invalid': itemForm.get('name').errors && (itemForm.get('name').touched || itemForm.get('name').dirty)}">
+      <small class="text-danger" *ngIf="itemForm.get('name').hasError('required')
+      && itemForm.get('name').touched">
+        Enter item name !
+      </small>
+      <small class="text-danger" *ngIf="itemForm.get('name').hasError('pattern')
+      && itemForm.get('name').touched">
+        Enter appropriate item name !
+      </small>
     </div>
+
     <div class="form-group">
-      <label>Quantity</label>
-      <input type="number" placeholder="Ex. 0" class="form-control">
+      <label required>Quantity</label>
+      <input formControlName="Quantity" type="number" placeholder="Ex. 0" class="form-control"
+      [ngClass]="{'is-invalid': itemForm.get('Quantity').errors && (itemForm.get('Quantity').touched || itemForm.get('Quantity').dirty)}">
+      <small class="text-danger font-weight-bold"
+      *ngIf="itemForm.get('Quantity').hasError('required') && itemForm.get('Quantity').touched">
+      Please enter number!
+      </small >
     </div>
     <button (click)="onDismiss()">Exit</button>
-    <button (click)="onConfirm()" style="float: right;">Submit</button>
+    <button type="submit" [disabled]="item_form.form.invalid"  style="float: right;">Submit</button>
   </form>
 
 </div>
