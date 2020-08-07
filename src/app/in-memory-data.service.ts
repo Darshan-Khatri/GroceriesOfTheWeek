@@ -49,10 +49,9 @@ export class InMemoryDataService implements InMemoryDbService {
       },
 
     ]
-
-
     return { CookList, GroceryList, CookGroceryList };
   };
+
 
   // genId(heroes: Icook[]): number {
   //   return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 1;

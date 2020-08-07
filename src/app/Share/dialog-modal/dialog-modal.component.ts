@@ -29,6 +29,7 @@ export class DialogModalComponent implements OnInit {
 
     this._GroceryService.getGroceryList().subscribe(list => {
       this.Grocery_List_array = list;
+      console.log("Total Grocery List : ",this.Grocery_List_array);
     });
 
     this.itemForm = this.fb.group({
@@ -60,6 +61,9 @@ export class DialogModalComponent implements OnInit {
       name: this.itemForm.value.name,
       Quantity: this.itemForm.value.Quantity
     };
+    console.log("Item name = ",this.itemForm.value.name);
+    console.log("Quantity = ",this.itemForm.value.Quantity);
+
     this.Grocery_List_array.push(data);
     console.log(this.Grocery_List_array);
 

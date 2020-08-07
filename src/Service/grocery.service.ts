@@ -48,9 +48,8 @@ export class GroceryService {
   //You have to make sure that Observable return-type(structure) must be same as body structure.
 
 
-  AddItem(body):Observable<IGrocery>{
-
-    return this._HttpClient.post<IGrocery>(this.ApiUrlById,body);
+  AddItem(body):Observable<IGrocery[]>{
+    return this._HttpClient.post<IGrocery[]>(this.ApiUrlById,body);
   }
 }
 

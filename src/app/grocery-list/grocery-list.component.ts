@@ -3,7 +3,7 @@ import { GroceryService } from "../../Service/grocery.service";
 import { IGrocery } from "../Modal/Grocery_List";
 import { ICookGroceryList } from "../Modal/Cook_Grocery_List";
 import { ActivatedRoute } from "@angular/router";
-import {MatDialog, MatDialogConfig, } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, } from '@angular/material/dialog';
 import { DialogModalComponent } from '../Share/dialog-modal/dialog-modal.component';
 //import { FormBuilder,FormGroup, Validators, NgForm } from '@angular/forms';
 
@@ -23,7 +23,7 @@ export class GroceryListComponent implements OnInit {
   constructor(
     private _GroceryService: GroceryService,
     private _ActivatedRoute: ActivatedRoute,
-    private _MatDialog:MatDialog,
+    private _MatDialog: MatDialog,
     //private fb:FormBuilder,
   ) { }
 
@@ -79,27 +79,20 @@ export class GroceryListComponent implements OnInit {
     })
   }
 
-  ModalForm(){
-
-    // this.itemForm = this.fb.group({
-    //   name:['',[Validators.required, Validators.pattern('^[a-zA-Z ]{2,25}*$')]],
-    //   Quantity:['',[Validators.required,Validators.pattern("^[0-9]{1,3}")]],
-    // })
-
+  ModalForm() {
 
     const MatDialog = this._MatDialog.open(DialogModalComponent,
       {
-        maxWidth:"80%",
-        disableClose : true,
-        autoFocus:true,
-
+        maxWidth: "80%",
+        disableClose: true,
+        autoFocus: true,
       });
 
-      MatDialog.afterClosed().subscribe(dialogResult => {
-        console.log(dialogResult);
-        this.GroceryListByCookID.groceryList = dialogResult.data;
-        console.log(this.GroceryListByCookID);
-      });
+    MatDialog.afterClosed().subscribe(dialogResult => {
+      console.log(dialogResult);
+      this.GroceryListByCookID.groceryList = dialogResult.data;
+      console.log(this.GroceryListByCookID);
+    });
   }
 
 }
